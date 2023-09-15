@@ -9,16 +9,10 @@ import {
 } from '@/components/ui/menubar'
 import { ChevronDown, Option, Settings, User } from 'lucide-react'
 
-interface DropDownOptions {
-  label: string
-  href: string
-  icon: React.FC
-}
-
 const options = [
-  { label: 'Profile', href: '/profile', icon: User },
-  { label: 'Preferences', href: '/preferences', icon: Option },
-  { label: 'Settings', href: '/settings', icon: Settings },
+  { label: 'Profile', href: '/profile', disabled: true, icon: User },
+  { label: 'Preferences', href: '/preferences', disabled: true, icon: Option },
+  { label: 'Settings', href: '/settings', disabled: false, icon: Settings },
 ]
 
 export function UserMenu() {
@@ -31,29 +25,20 @@ export function UserMenu() {
           </MenubarTrigger>
           <MenubarContent className="mx-2">
             {options.map((option) => (
-              <Link key={option.href} href={option.href}>
-                <MenubarItem className="gap-4 text-primary">
+              <MenubarItem
+                key={option.href}
+                disabled={option.disabled}
+                className="text-primary"
+              >
+                <Link href={option.href} className="flex gap-2">
                   <option.icon className="h-5 w-5 text-zinc-500" />
                   {option.label}
-                </MenubarItem>
-              </Link>
+                </Link>
+              </MenubarItem>
             ))}
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
-      {/* <Select>
-        <SelectTrigger className="w-24 border-0 focus:ring-0 focus:ring-offset-0 bg-transparent justify-end"></SelectTrigger>
-        <SelectContent>
-          <SelectGroup>
-            <SelectLabel>Abhinand</SelectLabel>
-            <SelectItem value="apple">Profile</SelectItem>
-            <SelectItem value="banana">View Appointments</SelectItem>
-            <SelectItem value="blueberry">Payments</SelectItem>
-            <SelectItem value="grapes">Help</SelectItem>
-            <SelectItem value="pineapple">Settings</SelectItem>
-          </SelectGroup>
-        </SelectContent>
-      </Select> */}
     </div>
   )
 }
