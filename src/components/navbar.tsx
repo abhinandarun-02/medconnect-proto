@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 
 import { UserAvatar } from './UserAvatar'
-import { SelectDemo } from './UserDropdown'
+import { UserMenu } from './UserDropdown'
 
 export const NavBar = () => {
   return (
@@ -30,7 +30,7 @@ export const NavBar = () => {
             className="w-[1px] bg-zinc-400"
           />
           <UserAvatar />
-          <SelectDemo />
+          <UserMenu />
         </div>
       </div>
     </nav>
