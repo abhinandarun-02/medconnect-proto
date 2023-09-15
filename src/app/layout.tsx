@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { SideBar } from '@/components/SideBar'
-import { NavBar } from '../components/NavBar'
+// import { NavBar } from '../components/NavBar'
 import { Separator } from '@/components/ui/separator'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -27,7 +27,8 @@ export default function RootLayout({
             <SideBar />
           </div>
           <div className="w-full">
-            <NavBar />
+            {/* <NavBar /> */}
+            <div></div>
             <Separator decorative className=" h-[1px]" />
             {children}
           </div>
