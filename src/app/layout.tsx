@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 import { SideBar } from '@/components/SideBar'
 
 import { Separator } from '@/components/ui/separator'
-import NavBar from '@/components/NavBar'
+import NavBar from '@/components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
