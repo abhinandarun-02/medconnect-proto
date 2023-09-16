@@ -60,10 +60,7 @@ export default function Home() {
   return (
     <div className="px-8 py-12">
       <div
-        className={cn(
-          'p-6 pb-12 bg-foreground w-[850px] rounded-2xl',
-          inter.className
-        )}
+        className={cn('p-6 pb-12 bg-foreground rounded-2xl', inter.className)}
       >
         <div className="flex justify-between items-center">
           <h1 className="font-semibold">Top Doctors</h1>
@@ -75,7 +72,7 @@ export default function Home() {
         <div className="mt-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-4 ">
           {doctors.map((doctor) => (
             <Link key={doctor.id} href="">
-              <div className=" h-32 p-4 flex w-full items-center gap-6 rounded-md bg-background hover:bg-zinc-200">
+              <div className="h-32 p-4 flex w-full  md:max-w-[400px] items-center gap-6 rounded-md bg-background hover:bg-zinc-200">
                 <UserAvatar
                   name={doctor.name}
                   image={doctor.image}

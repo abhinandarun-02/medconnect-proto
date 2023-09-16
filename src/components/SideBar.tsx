@@ -16,9 +16,6 @@ export const SideBar = () => {
         <h2 className={inter.className}>MedConnect</h2>
       </div>
       <div className="relative mt-8 w-full flex items-center gap-5 px-2">
-        <Button variant={'ghost'} size={'icon'} className="w-6 h-6 md:hidden">
-          <Menu />
-        </Button>
         <Input
           type="text"
           placeholder="Search..."
