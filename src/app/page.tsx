@@ -17,7 +17,7 @@ interface doctorProps {
   noOfReviews: number
 }
 
-const doctors: doctorProps[] = [
+export const doctors: doctorProps[] = [
   {
     id: 1,
     name: 'Dr. John Doe',
