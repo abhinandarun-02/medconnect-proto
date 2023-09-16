@@ -12,6 +12,22 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'MedConnect',
   description: 'Your second opinion on diseases',
+  openGraph: {
+    title: 'MedConnect: Health Genius',
+    description: 'Your second opinion on health',
+    url: 'https://medconnect-proto.vercel.app/',
+    siteName: 'MedConnect',
+    locale: 'en-US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://medconnect-proto.vercel.app/og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'MedConnect',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
