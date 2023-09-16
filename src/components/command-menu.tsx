@@ -13,7 +13,7 @@ import {
   CommandList,
 } from '@/components/ui/command'
 
-import { doctors } from '@/app/page'
+import { doctors } from '@/data/doctors'
 import Image from 'next/image'
 
 export function CommandMenu({ ...props }) {
