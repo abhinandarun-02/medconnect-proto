@@ -7,7 +7,35 @@ import { SideBar } from '@/components/SideBar'
 import { Separator } from '@/components/ui/separator'
 import NavBar from '@/components/navbar'
 
-const inter = Inter({ subsets: ['latin'] })
+import localFont from '@next/font/local'
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+
+const sfui = localFont({
+  src: [
+    {
+      path: '../../public/fonts/sfui/SFUIText-Light.woff2',
+      weight: '300',
+    },
+    {
+      path: '../../public/fonts/sfui/SFUIText-Regular.woff2',
+      weight: '400',
+    },
+    {
+      path: '../../public/fonts/sfui/SFUIText-Medium.woff2',
+      weight: '500',
+    },
+    {
+      path: '../../public/fonts/sfui/SFUIText-Semibold.woff2',
+      weight: '600',
+    },
+    {
+      path: '../../public/fonts/sfui/SFUIText-Bold.woff2',
+      weight: '700',
+    },
+  ],
+  variable: '--font-sfui',
+})
 
 export const metadata: Metadata = {
   title: 'MedConnect',
@@ -41,6 +69,7 @@ export default function RootLayout({
         {' '}
         <main className="flex">
           <div className="sidebar hidden md:flex flex-col bg-foreground w-[300px] h-screen">
+            <h1 className={sfui.className}>SF UI FONT</h1>
             <SideBar />
           </div>
           <div className="w-full">
