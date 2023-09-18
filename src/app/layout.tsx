@@ -8,6 +8,7 @@ import { Separator } from '@/components/ui/separator'
 import NavBar from '@/components/navbar'
 
 import localFont from '@next/font/local'
+import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -69,7 +70,6 @@ export default function RootLayout({
         {' '}
         <main className="flex">
           <div className="sidebar hidden md:flex flex-col bg-foreground w-[300px] h-screen">
-            <h1 className={sfui.className}>SF UI FONT</h1>
             <SideBar />
           </div>
           <div className="w-full">
@@ -77,6 +77,7 @@ export default function RootLayout({
             <Separator decorative className=" h-[1px]" />
             {children}
           </div>
+          <Toaster />
         </main>
       </body>
     </html>

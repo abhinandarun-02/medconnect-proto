@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 
 import {
   CalendarDays,
+  Code,
   CreditCard,
   HeartPulse,
   Home,
@@ -23,6 +24,12 @@ const routes = [
     label: 'Home',
     icon: Home,
     href: '/',
+    disabled: false,
+  },
+  {
+    label: 'Predict',
+    icon: Code,
+    href: '/predict',
     disabled: false,
   },
   {
