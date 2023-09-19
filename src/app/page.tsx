@@ -13,7 +13,10 @@ export default function Home() {
   return (
     <div className="px-8 py-12">
       <div
-        className={cn('p-6 pb-12 bg-foreground rounded-2xl', inter.className)}
+        className={cn(
+          'p-6 pb-12 bg-foreground rounded-2xl drop-shadow-xl',
+          inter.className
+        )}
       >
         <div className="flex justify-between items-center">
           <h1 className="font-semibold">Top Doctors</h1>

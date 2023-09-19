@@ -10,11 +10,9 @@ export default async function Prediction() {
   }
 
   return (
-    <div className="font-sans p-12 pt-36 h-full w-full flex flex-col gap-4 ">
-      <div>
+    <div className="font-sans m-12 rounded-2xl bg-foreground drop-shadow-xl">
+      <div className="px-6 py-24 flex flex-col gap-4 w-full">
         <h1 className="font-medium text-4xl">Disease Prediction</h1>
-      </div>
-      <div>
         <PredictionForm />
       </div>
     </div>
