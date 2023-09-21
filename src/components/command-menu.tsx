@@ -64,7 +64,7 @@ export function CommandMenu({ ...props }) {
               <CommandItem
                 key={doctor.id}
                 value={doctor.name}
-                className="text-black gap-2 ml-2"
+                className="text-black gap-2 ml-2 cursor-pointer"
               >
                 <Image
                   src={doctor.image}

@@ -67,14 +67,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {' '}
         <main className="flex">
-          <div className="sidebar hidden md:flex flex-col bg-foreground w-[300px] h-screen">
+          <div className="sidebar hidden md:flex flex-col bg-foreground fixed h-screen drop-shadow-sm w-[300px]">
             <SideBar />
           </div>
-          <div className="w-full">
+          <div className="w-full md:ml-[300px]">
             <NavBar />
-            <Separator decorative className=" h-[1px]" />
+            <Separator decorative className="h-[1px]" />
             {children}
           </div>
           <Toaster />

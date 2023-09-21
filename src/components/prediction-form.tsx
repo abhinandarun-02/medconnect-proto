@@ -17,6 +17,8 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Textarea } from '@/components/ui/textarea'
+import { Loader2 } from 'lucide-react'
+import { toast } from './ui/use-toast'
 
 const FormSchema = z.object({
   symptoms: z
@@ -35,13 +37,21 @@ export function PredictionForm() {
   })
 
   const [disease, setDisease] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     const response = await axios.get(
       `http://127.0.0.1:5000/predict?symptoms=${data.symptoms}`
     )
     const responseData = response.data
-    setDisease(responseData.prediction)
+    setIsLoading(true)
+    toast({
+      description: 'Submitted Successfully',
+    })
+    setTimeout(() => {
+      setIsLoading(false)
+      setDisease(responseData.prediction)
+    }, 2000)
   }
 
   return (
@@ -68,7 +78,12 @@ export function PredictionForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="hover:bg-black hover:scale-105">
+          <Button
+            type="submit"
+            disabled={isLoading}
+            className="gap-2 hover:bg-black hover:scale-105"
+          >
+            {isLoading && <Loader2 className="animate-spin" />}
             Predict
           </Button>
         </form>
