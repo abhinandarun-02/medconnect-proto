@@ -27,12 +27,6 @@ const routes = [
     disabled: false,
   },
   {
-    label: 'Predict',
-    icon: Code,
-    href: '/predict',
-    disabled: false,
-  },
-  {
     label: 'Doctors',
     icon: HeartPulse,
     href: '/doctors',
